@@ -1,5 +1,18 @@
 <?php
 
+/*
+
+Helper for loading JavaScript assets with Assetic, which does not seem to cover
+the basic use case of loading files with individual SCRIPT tags in development
+and concatenating (etc.) them in production.
+
+Copyright © 2012 Jesse McCarthy <http://jessemccarthy.net/>
+
+This software may be used under the MIT (aka X11) license or
+Simplified BSD (aka FreeBSD) license.  See LICENSE.
+
+*/
+
 $auto_loader = function ( $class_name ) {
 
   $class_name = str_replace( "\\", "/", $class_name );
